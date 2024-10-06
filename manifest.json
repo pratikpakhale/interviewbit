@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "InterviewBit Question Viewer",
+  "version": "1.0",
+  "description": "Display random interview questions from InterviewBit",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://*.interviewbit.com/*"],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}

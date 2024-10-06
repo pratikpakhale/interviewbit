@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InterviewBit Question Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon-container">
+        <img src="reload.svg" id="refresh-icon" class="icon" alt="Refresh" />
+        <img
+          src="settings.svg"
+          id="settings-icon"
+          class="icon"
+          alt="Settings"
+        />
+      </div>
+      <h1 id="time"></h1>
+      <h2 id="date"></h2>
+      <div id="question-container">
+        <div id="topic"></div>
+        <h3 id="question"></h3>
+        <div id="answer" class="blurred"></div>
+      </div>
+      <div id="settings-modal">
+        <div class="modal-content">
+          <h3>Choose Topics</h3>
+          <div id="topics-list"></div>
+          <button id="save-settings">Save</button>
+          <button id="close-settings">Close</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.container {
+  width: 70vw;
+  max-width: 1200px;
+  /* Optional: to prevent it from getting too wide on large screens */
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.container a {
+  color: #4fc3f7;
+  /* text-decoration: none; */
+}
+
+
+h1,
+h2 {
+  color: #ffffff;
+}
+
+#topic {
+  color: #4fc3f7;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+#question-container {
+  margin-top: 20px;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+#question a {
+  color: #4fc3f7;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+#question a:hover {
+  text-decoration: underline;
+}
+
+#answer {
+  color: #e0e0e0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+#answer img {
+  max-width: 100%;
+  max-height: 80vh;
+  /* Limits height to 80% of viewport height */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  background-color: #f1f1f1;
+  /* Ensures the entire image is visible */
+}
+
+
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-left: 15px;
+  padding: 5px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+#settings-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  margin: 15% auto;
+  padding: 30px;
+  border: 1px solid #333;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+#topics-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.topic-item {
+  margin-bottom: 15px;
+}
+
+.topic-item label {
+  margin-left: 10px;
+  color: #e0e0e0;
+  font-size: 1.1em;
+}
+
+button {
+  background-color: #4fc3f7;
+  border: none;
+  color: #000000;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 10px 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#answer {
+  transition: filter 0.3s ease;
+}
+
+.blurred {
+  filter: blur(5px);
+}
+
+#toggle-answer {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
