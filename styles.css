@@ -32,7 +32,7 @@ h2 {
 #topic {
   color: #4fc3f7;
   font-size: 1.4em;
-  margin-bottom: 15px;
+  margin-left: 15px;
 }
 
 #question-container {
@@ -96,18 +96,25 @@ h2 {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
   background-color: #1e1e1e;
-  margin: 15% auto;
+  position: absolute;
+  /* Use absolute positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center the modal */
   padding: 30px;
   border: 1px solid #333;
   width: 80%;
   max-width: 500px;
   border-radius: 8px;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 #topics-list {
