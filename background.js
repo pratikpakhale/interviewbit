@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.alarms.create('questionReminder', { when: Date.now() + 10000 }); // Set to trigger every 30 minutes
+  chrome.alarms.create('questionReminder', { periodInMinutes: 30 }); // Set to trigger every 30 minutes
 });
 
 chrome.alarms.onAlarm.addListener(alarm => {

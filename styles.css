@@ -1,7 +1,17 @@
+:root {
+  --background-color: #121212;
+  --container-bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --highlight-color: #4fc3f7;
+  --border-color: #333;
+  --button-bg-color: #4fc3f7;
+  --button-text-color: #000;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 20px;
   font-size: 18px;
@@ -10,19 +20,17 @@ body {
 .container {
   width: 70vw;
   max-width: 1200px;
-  /* Optional: to prevent it from getting too wide on large screens */
   margin: 0 auto;
-  background-color: #1e1e1e;
+  background-color: var(--container-bg-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-.container a {
-  color: #4fc3f7;
-  /* text-decoration: none; */
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
 }
-
 
 h1,
 h2 {
@@ -30,22 +38,16 @@ h2 {
 }
 
 #topic {
-  color: #4fc3f7;
+  color: var(--highlight-color);
   font-size: 1.4em;
   margin-left: 15px;
 }
 
 #question-container {
   margin-top: 20px;
-  border: 1px solid #333;
+  border: 1px solid var(--border-color);
   padding: 20px;
   border-radius: 4px;
-}
-
-#question a {
-  color: #4fc3f7;
-  text-decoration: none;
-  font-size: 1.2em;
 }
 
 #question a:hover {
@@ -53,24 +55,21 @@ h2 {
 }
 
 #answer {
-  color: #e0e0e0;
+  color: var(--text-color);
   font-size: 1.1em;
   line-height: 1.6;
+  transition: filter 0.3s ease;
 }
 
 #answer img {
   max-width: 100%;
   max-height: 80vh;
-  /* Limits height to 80% of viewport height */
   height: auto;
   display: block;
   margin: 0 auto;
   object-fit: contain;
   background-color: #f1f1f1;
-  /* Ensures the entire image is visible */
 }
-
-
 
 .icon-container {
   display: flex;
@@ -84,10 +83,20 @@ h2 {
   cursor: pointer;
   margin-left: 15px;
   padding: 5px;
-  background-color: #333;
+  background-color: var(--border-color);
   border-radius: 50%;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center img {
+  display: block;
+}
+
+#add-custom-topic-modal,
 #settings-modal {
   display: none;
   position: fixed;
@@ -100,16 +109,25 @@ h2 {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+#custom-topic-url,
+#custom-topic-name {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+
 .modal-content {
-  background-color: #1e1e1e;
+  background-color: var(--container-bg-color);
   position: absolute;
-  /* Use absolute positioning */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Center the modal */
   padding: 30px;
-  border: 1px solid #333;
+  border: 1px solid var(--border-color);
   width: 80%;
   max-width: 500px;
   border-radius: 8px;
@@ -129,26 +147,21 @@ h2 {
 
 .topic-item label {
   margin-left: 10px;
-  color: #e0e0e0;
+  color: var(--text-color);
   font-size: 1.1em;
 }
 
 button {
-  background-color: #4fc3f7;
+  background-color: var(--button-bg-color);
   border: none;
-  color: #000000;
+  color: var(--button-text-color);
   padding: 12px 24px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 1em;
   margin: 10px 5px;
   cursor: pointer;
   border-radius: 4px;
-}
-
-#answer {
-  transition: filter 0.3s ease;
 }
 
 .blurred {

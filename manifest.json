@@ -3,7 +3,8 @@
   "name": "InterviewBit Question Viewer",
   "version": "1.0.0",
   "description": "Display random interview questions from InterviewBit on your new tab page",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "alarms", "notifications"],
+
   "host_permissions": ["https://*.interviewbit.com/*"],
   "chrome_url_overrides": {
     "newtab": "index.html"

@@ -9,7 +9,13 @@
   <body>
     <div class="container">
       <div class="icon-container">
-        <img src="reload.svg" id="refresh-icon" class="icon" alt="Refresh" />
+        <img
+          src="reload.svg"
+          id="refresh-icon"
+          class="icon"
+          alt="Refresh"
+          aria-label="Refresh question"
+        />
         <img
           src="settings.svg"
           id="settings-icon"
@@ -20,23 +26,41 @@
       <h1 id="time">...</h1>
       <h2 id="date">...</h2>
       <div id="question-container">
-        <div style="display: flex; align-items: center">
-          <img
-            src="./icon48.png"
-            style="height: 40px; display: block"
-            alt="InterviewBit"
-          />
+        <div class="flex-center">
+          <img src="./icon48.png" class="icon-img" alt="InterviewBit" />
           <div id="topic"></div>
         </div>
-        <h3 id="question">...</h3>
+        <h3 id="question"><a href="#" target="_blank">...</a></h3>
         <div id="answer" class="blurred"></div>
       </div>
-      <div id="settings-modal">
+      <div id="add-custom-topic-modal" class="modal">
+        <div class="modal-content">
+          <h3>Add Custom Topic</h3>
+          <p>
+            To add a custom topic, go to
+            <a
+              href="https://www.interviewbit.com/technical-interview-questions/"
+              target="_blank"
+              >InterviewBit</a
+            >
+            and click on a topic. Use the URL of the topic page.
+          </p>
+          <input
+            type="text"
+            id="custom-topic-url"
+            placeholder="https://www.interviewbit.com/topic-name-interview-questions/"
+          />
+          <input type="text" id="custom-topic-name" placeholder="Topic Name" />
+          <button id="save-custom-topic">Save Custom Topic</button>
+          <button id="close-custom-topic">Close</button>
+        </div>
+      </div>
+      <div id="settings-modal" class="modal">
         <div class="modal-content">
           <h3>Choose Topics</h3>
           <div id="topics-list"></div>
-          <button id="save-settings">Save</button>
           <button id="close-settings">Close</button>
+          <button id="add-custom-topic">Add Custom Topic</button>
         </div>
       </div>
     </div>
